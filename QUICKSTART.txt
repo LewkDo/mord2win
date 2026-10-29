@@ -1,0 +1,18 @@
+MORDOR II: DARKNESS AWAKENING v0.992b — Windows 11 x64 compatibility v0.1.0
+
+NO GAME FILES OR MICROSOFT RUNTIMES INCLUDED.
+
+1. Get an installed copy of the original game from your own legitimate copy.
+   If needed, use a Windows 7 virtual machine to install it.
+   You need the full game folder and Data\M2ObjectsI.MDR.
+2. In the VM: run COLLECT-RUNTIMES.cmd. Copy the resulting
+   Mordor-Runtimes directory next to INSTALL-COMPAT.cmd on Windows 11.
+3. Run INSTALL-COMPAT.cmd and enter your Windows 11 game directory.
+4. Run <game>\MordorCompat\CHECK-MORDOR.cmd.
+5. Right-click <game>\MordorCompat\REGISTER-CONTROLS.cmd, Run as administrator.
+6. Turn on speakers/headphones FIRST, then run <game>\PLAY-MORDOR-WIN11.cmd.
+
+IMPORTANT: This is an unofficial preview, tested on one Windows 11 system;
+the setup scripts have not themselves been tested on a clean Windows 11 VM.
+Read README.md and docs/TROUBLESHOOTING.md before installing.
+Official game site: https://www.decklinsdemise.com/mordor2.htm
