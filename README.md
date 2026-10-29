@@ -4,14 +4,14 @@
 
 Makes an *already installed* copy of the original Mordor II v0.992b demo usable on modern **Windows 11 x64** without modifying the original game's EXE. The tested configuration launched, loaded a saved character, entered the OpenGL 3D dungeon, and played audio and MIDI music on **one** Windows 11 system. Other hardware/Windows builds have **not** been verified; this is not a native 64-bit port.
 
-## What's in this ZIP
+## What's in here
 
 - An original 32-bit `opengl.dll` **export-forwarder**, mapping 46 old OpenGL/Win32 API names to modern Windows `opengl32.dll` / `gdi32.dll`. This is a 4,096-byte compatibility DLL, not the copyrighted game renderer.
 - Installation, launch, integrity-check, ActiveX registration and audio-check scripts.
 - The corresponding shim `.def` export map, minimal C source and build notes.
 - A helper to collect runtime files from **your own** working Windows 7 installation.
 
-**Not included:** the game EXE, any maze/data/graphics, saved games, `DWSW32.DLL`, `MSVBVM50.DLL`, `.OCX` files, Windows system DLLs, or other proprietary game assets. **Do not redistribute those files from this kit.**
+**Not included:** the game EXE, any maze/data/graphics, saved games, `DWSW32.DLL`, `MSVBVM50.DLL`, `.OCX` files, Windows system DLLs, or other proprietary game assets. 
 
 ## Obtain game files legally
 
