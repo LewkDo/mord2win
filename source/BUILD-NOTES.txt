@@ -1,0 +1,18 @@
+Reproducible source for opengl.dll
+================================
+This 32-bit file was compiled without linking the game executable or
+copying the original legacy opengl.dll. It consists of 46 export forwards.
+
+Build environment: clang targeting i686-pc-windows-msvc and LLVM lld-link.
+1. clang --target=i686-pc-windows-msvc -c forwarder-source.c -o forwarder-source.obj
+2. lld-link /dll /noentry /machine:x86 /out:opengl.dll forwarder-source.obj \
+   /export:glBegin=opengl32.glBegin /export:ChoosePixelFormat=gdi32.ChoosePixelFormat ...
+   (see complete 46-entry mapping in opengl-forwarder.def)
+
+When using lld-link 17, /export: options were used to keep the forwarded
+DLL names precisely 'gdi32' / 'opengl32' (rather than a decorated _ prefix).
+
+Validation: 46 OpenGL names imported by MDV.dll are exported exactly, and
+PE export forwarder targets point to gdi32/opengl32, not to old OpenGL.dll.
+This validates only the binary format and export names, NOT Windows 11
+loadability, GPU-driver behavior, or the game itself.
